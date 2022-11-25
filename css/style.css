@@ -1,0 +1,89 @@
+:root {
+  --wrapper-margin: 50px;
+  --eye-size: 100px;
+  --eye-margin: 20px;
+}
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: grey;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
+  width: calc(100vw - var(--wrapper-margin));
+  height: calc(100vh - var(--wrapper-margin));
+  overflow: hidden;
+}
+
+.eye {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: var(--eye-size);
+  height: var(--eye-size);
+  margin: 20px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background: white;
+  background: radial-gradient(circle at 50% 40%, white, white 70%, black 100%);
+  box-shadow: 0px -5px 10px 5px inset rgb(172, 172, 172);
+}
+.eye::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 25%;
+  left: 75%;
+  width: 1%;
+  height: 1%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.822);
+  box-shadow: 0px 0px 8px 5px rgb(255, 255, 255);
+}
+.eye__ball {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  width: calc(var(--eye-size) - 4%);
+  height: calc(var(--eye-size) - 4%);
+  border-radius: 50%;
+}
+.eye__ball:hover {
+  align-items: center;
+}
+.eye__iris {
+  width: 50%;
+  height: 50%;
+  background: #49f743;
+  position: relative;
+  box-shadow: 0px 0px 15px black inset;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+.eye__iris::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0px 0px 2px;
+  transform: translate(-50%, -50%);
+  width: 45%;
+  height: 45%;
+  background: black;
+}/*# sourceMappingURL=style.css.map */
